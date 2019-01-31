@@ -4,7 +4,8 @@
 }
 
 body{
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 /*Header*/
@@ -108,7 +109,7 @@ form{
 
 input{
   width: 100%;
-  padding: 6%;
+  padding: 3%;
 }
 
 .update{
@@ -125,15 +126,21 @@ span{
 }
 
 .c-name{
-  width: 34%;
+  width: 66%;
+  max-height: 100px;
   justify-content: space-around;
-  padding: 1%;
+  padding-right: 1%;
 }
 
 .challenger{
   width: 34%;
   justify-content: space-around;
-  padding: 1%;
+  padding: 0%;
+}
+
+.guess{
+  padding-top:1%;
+  font-size: 1.5em;
 }
 
 .submit{
@@ -165,7 +172,7 @@ button{
   
 }
 
-.guess{
+.current{
   font-size: 3em;
   color:#DD1972;
   text-decoration: none;
