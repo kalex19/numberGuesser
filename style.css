@@ -124,7 +124,11 @@ span{
   text-decoration: underline;margin: 1%;
 }
 
-
+.c-name{
+  width: 164px;
+  justify-content: space-around;
+  padding: 1%;
+}
 
 .challenger{
   width: 28%;
@@ -132,9 +136,19 @@ span{
   padding: 1%;
 }
 
+.submit{
+  background-color:#6E6E6E;
+  color: #fff;
+  margin: 3% 1%;
+  padding: 1%;
+  width: 30%;
+  font-size: medium;
+  border-radius: 34px; 
+}
+
 button{
-  background-color: #6E6E6E
-  color: #000;
+  background-color: #D0D2D3;
+  color: #fff;
   margin: 3% 1%;
   padding: 1%;
   width: 30%;
@@ -143,7 +157,9 @@ button{
 }
 
 .lastest-score{
-  display: inline-grid;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   margin: 3%;
   background-color: #fff;
   width: auto; 
