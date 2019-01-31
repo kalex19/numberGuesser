@@ -1,0 +1,185 @@
+*{
+  box-sizing: border-box;
+  /*border: red 1px solid;*/
+}
+
+body{
+  font-family: sans-serif;
+}
+
+/*Header*/
+
+header{
+  text-align: center;
+  background-color:#404041;
+  width: 100%;
+}
+
+h1{
+  color: #DD1972;
+  font-weight: 300;
+  font-size: 3em;
+  margin:0; 
+}
+
+strong{
+  font-weight: 700;
+}
+
+.line{
+   font-weight: 300;
+   font-size: 1em;
+   margin: 0 2em;
+   text-align: center;
+   color: #fff;
+   padding-bottom: 1em;
+}
+
+.line span {
+  display: inline-block;
+  position: relative;
+  line-height: 0.5;  
+}
+
+.line span:before,
+.line span:after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #fff;
+  top: 50%;
+  width: 30%;
+}
+
+.line span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.line span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+/*Main Content*/
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*Column 1*/
+
+section{
+  display: flex;
+  flex-direction: column;
+  margin:0;
+  width: 50%;
+}
+
+.column-1{
+  background-color: #F7F7F7;
+}
+
+article{
+  margin: 3%;
+  background-color: #fff;
+  width: auto; 
+  padding: 1%; 
+}
+
+h3{
+  margin: 1%;
+  
+}
+
+form{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+
+.range{
+  width: 28%;
+  justify-content: space-around, center;
+  padding: 1%;
+
+}
+
+input{
+  width: 100%;
+  padding: 6%;
+}
+
+.update{
+  background-color: #6E6E6E;
+  color: #fff;
+  padding: 5%;
+  width: 100%;
+  font-size: medium;
+  border-radius: 34px;  
+}
+
+span{
+  text-decoration: underline;margin: 1%;
+}
+
+
+
+.challenger{
+  width: 28%;
+  justify-content: space-around;
+  padding: 1%;
+}
+
+button{
+  background-color: #6E6E6E
+  color: #000;
+  margin: 3% 1%;
+  padding: 1%;
+  width: 30%;
+  font-size: medium;
+  border-radius: 34px;  
+}
+
+.lastest-score{
+  display: inline-grid;
+  margin: 3%;
+  background-color: #fff;
+  width: auto; 
+  padding: 1%;
+  text-align: center;
+  margin-left: 15%; 
+}
+
+.guess{
+  font-size: 3em;
+  color:#DD1972;
+  text-decoration: none;
+}
+
+/*Column 2*/
+
+ .card{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.winner{
+  font-size: 3em;
+}
+
+.exit{
+  border-radius: 50%;
+  width: 5%;
+}
+
+.column-2{
+  background-color: #C3C4C5;
+  opacity: .85;
+}
+
+
+
+
