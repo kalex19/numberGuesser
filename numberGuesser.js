@@ -2,6 +2,8 @@ var min = document.querySelector(".min");
 var max = document.querySelector(".max");
 var minInput = document.querySelector(".min-input");
 var maxInput = document.querySelector(".max-input");
+var minInteger;
+var maxInteger ;
 var updateButton = document.querySelector(".update");
 var challengerNameOneInput = document.querySelector(".challenger-1-name-input")
 var challengerNameTwoInput = document.querySelector(".challenger-2-name-input")
@@ -13,6 +15,8 @@ var challengerOneGuess = document.querySelector("#challenger-1-guess")
 var challengerTwoGuess = document.querySelector("#challenger-2-guess")
 var submitButton = document.querySelector(".submit-button")
 var randomNumber;
+var clearButton = document.querySelector('.clear-button')
+var resetButton = document.querySelector('.reset-button')
 
 
 var challengerOneConditional = document.querySelector(".challenger-1-conditional")
@@ -20,6 +24,8 @@ var challengerTwoConditional = document.querySelector(".challenger-2-conditional
 
 updateButton.addEventListener("click", updateRange);
 submitButton.addEventListener("click", submitInfo);
+clearButton.addEventListener('click', clearInput);
+resetButton.addEventListener('click', reset);
 
 
 
@@ -52,3 +58,22 @@ submitButton.addEventListener("click", submitInfo);
     else  {
     challengerTwoConditional.innerText = "That's Too Low"}
   };
+
+  function clearInput(){
+    challengerNameOneInput.value = ""
+    challengerNameTwoInput.value = ""
+    challengerOneGuessInput.value = ""
+    challengerTwoGuessInput.value = ""
+}
+
+  function reset(){
+    challengerNameOneInput.value = ""
+    challengerNameTwoInput.value = ""
+    challengerOneGuessInput.value = ""
+    challengerTwoGuessInput.value = ""
+    randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
+}
+
+
+
+
