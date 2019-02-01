@@ -51,7 +51,7 @@
           </div>
           <div class="challenger">
             <label>Guess
-              <input class="guess" type="text">
+              <input class="guess" type="text" id="challenger-1-guess-input">
             </label>
           </div>
           </form>
@@ -66,13 +66,13 @@
           </div>
           <div class="challenger">
             <label>Guess
-              <input class="guess" type="text">
+              <input class="guess" type="text" id="challenger-2-guess-input">
             </label>
           </div>
           </form>
 
 <!--Submit Buttons-->       
-          <button class="submitButton">SUBMIT GUESS</button>
+          <button class="submit-button">SUBMIT GUESS</button>
           <button>RESET GAME</button>
           <button>CLEAR GAME</button>
         </article>
@@ -81,22 +81,21 @@
         <article>
         <h3>Latest Score</h3>
           <div class="lastest-score">
-          <h4>Challenger 1 Name</h4>
+          <h4 class="challenger-1-name">Challenger 1 Name</h4>
           <p>current guess</p>
-          <p><span class="current">97</span></p>
-          <p>that's too high</p>
+          <p><span class="current" id="challenger-1-guess">97</span></p>
+          <p class="challenger-1-conditional">that's too high</p>
           </div>
           
         <div class="outer-line">
         <div class="inner-line">
         </div>
         </div>
-
           <div class="lastest-score-2">
-          <h4>Challenger 2 Name</h4>
+          <h4 class="challenger-2-name">Challenger 2 Name</h4>
           <p>current guess</p>
-          <p><span class="current">3</span></p>
-          <p>that's too low</p>
+          <p><span class="current" id="challenger-2-guess">3</span></p>
+          <p class="challenger-2-conditional">that's too low</p>
         </div>
         </article>
       
