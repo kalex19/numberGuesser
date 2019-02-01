@@ -1,4 +1,4 @@
-var min = document.querySelector(".min");
+var notmin = document.querySelector(".min");
 var max = document.querySelector(".max");
 var minInput = document.querySelector(".min-input");
 var maxInput = document.querySelector(".max-input");
