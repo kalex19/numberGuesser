@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number Guesser</title>
-    <script type="text/javascript" src="numberGuesser.js"></script>
+    
   </head>
     
 <!--Body-->
@@ -29,24 +29,24 @@
           <h3>Set Range</h3>
           <form>
             <div class="range"><label text="Min Range">Min Range</label>
-            <input type="text"></div>
+            <input type="text" class="min-input"></div>
             <div class="range"><label text="Max Range">Max Range</label>
-            <input type="text"></div>
-            <div class="range"><button class="update">UPDATE</button></div>
+            <input type="text" class="max-input"></div>
+            <div class="range"><button type="button" class="update">UPDATE</button></div>
           </form>
         </div>
         </article>
       
 <!--Current Range-->
         <article>
-          <p>The Current Range is <span><strong>1</strong></span>to<span><strong>100</strong></span></p>
+          <p>The Current Range is <span class="min"><strong>1</strong></span>to<span class="max"><strong>100</strong></span></p>
 
 <!--Challenger 1-->
           <h3>Challenger 1</h3>
           <form>
             <div class="c-name">
             <label>Name
-              <input type="text">
+              <input type="text" class="challenger-1-name-input">
             </label>
           </div>
           <div class="challenger">
@@ -61,17 +61,18 @@
           <form>
             <div class="c-name">
             <label>Name
-              <input  type="text">
+              <input  type="text" class="challenger-2-name-input">
             </label>
           </div>
           <div class="challenger">
             <label>Guess
-              <input class="guess"s type="text">
+              <input class="guess" type="text">
             </label>
           </div>
           </form>
 
-<!--Submit Buttons-->       <button class="submit">SUBMIT GUESS</button>
+<!--Submit Buttons-->       
+          <button class="submitButton">SUBMIT GUESS</button>
           <button>RESET GAME</button>
           <button>CLEAR GAME</button>
         </article>
@@ -178,5 +179,6 @@
 
         </article>
       </section>
-    </main>
+  </main>
+  <script type="text/javascript" src="numberGuesser.js"></script>
   </body>
