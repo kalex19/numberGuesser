@@ -22,6 +22,10 @@ var resetButton = document.querySelector('.reset-button')
 var challengerOneConditional = document.querySelector(".challenger-1-conditional")
 var challengerTwoConditional = document.querySelector(".challenger-2-conditional")
 
+var errorMessageRange = document.querySelector('.error-message')
+var errorMessageGuessOne = document.querySelector('.error-message-guess-one')
+var errorMessageGuessTwo = document.querySelector('.error-message-guess-two')
+
 updateButton.addEventListener("click", updateRange);
 submitButton.addEventListener("click", submitInfo);
 clearButton.addEventListener('click', clearInput);
@@ -36,6 +40,9 @@ resetButton.addEventListener('click', reset);
     maxInteger = Math.floor(parseInt(maxInput.value,10))
     randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
     console.log(randomNumber)
+    if (parseInt(minInput.value) = NaN) {errorMessageRange.classList.remove("error-message");
+    } else {errorMessageRange.classList.add("error-message");
+    }
 };
 
 
@@ -57,6 +64,19 @@ resetButton.addEventListener('click', reset);
       challengerTwoConditional.innerText = "FUCK YOU FOR GUESSING RIGHT"}
     else  {
     challengerTwoConditional.innerText = "That's Too Low"}
+
+    if (parseInt(challengerOneGuessInput.value) < minInteger || parseInt(challengerOneGuessInput.value) > maxInteger) {
+      errorMessageGuessOne.classList.remove("error-message-guess-one")
+    } else {
+      errorMessageGuessOne.classList.add("error-message-guess-one")
+    }
+
+if (parseInt(challengerTwoGuessInput.value) < minInteger || parseInt(challengerTwoGuessInput.value) > maxInteger) {
+      errorMessageGuessTwo.classList.remove("error-message-guess-two")
+    } else {
+      errorMessageGuessTwo.classList.add("error-message-guess-two")
+    }
+
   };
 
   function clearInput(){
@@ -73,6 +93,8 @@ resetButton.addEventListener('click', reset);
     challengerTwoGuessInput.value = ""
     randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
 }
+
+
 
 
 
