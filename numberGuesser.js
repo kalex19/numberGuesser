@@ -25,9 +25,12 @@ var challengerTwoConditional = document.querySelector(".challenger-2-conditional
 var errorMessageRange = document.querySelector('.error-message')
 var errorMessageGuessOne = document.querySelector('.error-message-guess-one')
 var errorMessageGuessTwo = document.querySelector('.error-message-guess-two')
-var maxLessMin = document.querySelector("#max-less-min")
-
+// var maxLessMin = document.querySelector("#max-less-min")
 var minMoreMax = document.querySelector("#min-more-max")
+var outsideRange1 = document.querySelector("#outside-range-one")
+var outsideRange2 = document.querySelector("#outside-range-two")
+
+
 
 updateButton.addEventListener("click", updateRange);
 submitButton.addEventListener("click", submitInfo);
@@ -93,13 +96,27 @@ resetButton.addEventListener('click', reset);
       errorMessageGuessOne.classList.add("error-message-guess-one")
     }
 
-if (parseInt(challengerTwoGuessInput.value) < minInteger || parseInt(challengerTwoGuessInput.value) > maxInteger) {
+    if (parseInt(challengerTwoGuessInput.value) < minInteger || parseInt(challengerTwoGuessInput.value) > maxInteger) {
       errorMessageGuessTwo.classList.remove("error-message-guess-two")
     } else {
       errorMessageGuessTwo.classList.add("error-message-guess-two")
     }
 
+    // if (parseInt(challengerOneGuessInput.value) > maxInteger || parseInt(challengerOneGuessInput.value) < minInteger) {outsideRange1.classList.remove("error-message")
+    // }else{
+    //   outsideRange1.classList.add(".error-message")
+    // }
+    //  if (parseInt(challengerTwoGuessInput.value) > maxInteger || parseInt(challengerTwoGuessInput.value) < minInteger) {outsideRange2.classList.remove("error-message")
+    // }else{
+    //   outsideRange2.classList.add(".error-message")
+    // }
+
+
   };
+
+
+
+
 
   function clearInput(){
     challengerNameOneInput.value = ""
