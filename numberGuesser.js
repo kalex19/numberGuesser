@@ -25,6 +25,9 @@ var challengerTwoConditional = document.querySelector(".challenger-2-conditional
 var errorMessageRange = document.querySelector('.error-message')
 var errorMessageGuessOne = document.querySelector('.error-message-guess-one')
 var errorMessageGuessTwo = document.querySelector('.error-message-guess-two')
+var maxLessMin = document.querySelector("#max-less-min")
+
+var minMoreMax = document.querySelector("#min-more-max")
 
 updateButton.addEventListener("click", updateRange);
 submitButton.addEventListener("click", submitInfo);
@@ -40,7 +43,26 @@ resetButton.addEventListener('click', reset);
     maxInteger = Math.floor(parseInt(maxInput.value,10))
     randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
     console.log(randomNumber)
-    if (parseInt(minInput.value) = NaN) {errorMessageRange.classList.remove("error-message");
+
+    // console.log(parseInt(minInput.value))
+
+    // if (maxInteger < minInteger) {
+    //   maxLessMin.classList.remove("error-message");
+    // }else{
+    //   maxLessMin.classList.add("error-message");
+    // }
+
+    if (maxInteger < minInteger) {
+      minMoreMax.classList.remove("error-message");
+    }else{
+      minMoreMax.classList.add("error-message");
+    }
+
+    if (parseInt(minInput.value)=== NaN) {errorMessageRange.classList.remove("error-message");
+    } else {errorMessageRange.classList.add("error-message");
+    }
+
+     if (parseInt(maxInput.value)=== NaN) {errorMessageRange.classList.remove("error-message");
     } else {errorMessageRange.classList.add("error-message");
     }
 };

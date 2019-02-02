@@ -99,15 +99,8 @@ form{
   justify-content: space-between;
 }
 
-.error-message {
-  display:hidden;
-}
-
-.error-message-guess-one{
-  display:hidden;
-}
-
-.error-message-guess-two{  display:hidden;
+.error-message, .error-message-guess-one, .error-message-guess-two {
+  display: none;
 }
 
 .error-message-style{
