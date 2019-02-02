@@ -23,7 +23,7 @@ var resetButton = document.querySelector('.reset-button')
 var challengerOneConditional = document.querySelector(".challenger-1-conditional")
 var challengerTwoConditional = document.querySelector(".challenger-2-conditional")
 
-var errorMessageRange = document.querySelector('.error-message')
+var inputRangeError = document.querySelector('#input-range-error')
 var errorMessageGuessOne = document.querySelector('.error-message-guess-one')
 var errorMessageGuessTwo = document.querySelector('.error-message-guess-two')
 // var maxLessMin = document.querySelector("#max-less-min")
@@ -69,12 +69,12 @@ resetButton.addEventListener('click', reset);
       minMoreMax.classList.add("error-message");
     }
 
-    if (parseInt(minInput.value)=== false) {errorMessageRange.classList.remove("error-message");
-    } else {errorMessageRange.classList.add("error-message");
+    if (parseInt(minInput.value)=== false) {inputRangeError.classList.remove('error-message');
+    } else {inputRangeError.classList.add('error-message');
     }
 
-     if (parseInt(maxInput.value)=== false) {errorMessageRange.classList.remove("error-message");
-    } else {errorMessageRange.classList.add("error-message");
+     if (parseInt(maxInput.value)=== false) {inputRangeError.classList.remove('error-message');
+    } else {inputRangeError.classList.add('error-message');
     }
 };
 
@@ -87,14 +87,30 @@ resetButton.addEventListener('click', reset);
     if (parseInt(challengerOneGuessInput.value) > randomNumber) {
       challengerOneConditional.innerText = "That's Too High"}
     else if (parseInt(challengerOneGuessInput.value) == randomNumber) {
-      challengerOneConditional.innerText = "FUCK YOU FOR GUESSING RIGHT"}
+      challengerOneConditional.innerText = "FUCK YOU FOR GUESSING RIGHT"
+      minInput = parseInt(minInput.value,10) - 10;
+      min.innerText = minInput;
+      maxInput = parseInt(maxInput.value,10) + 10;
+      max.innerText = maxInput;
+      minInteger = Math.ceil(parseInt(minInput,10));
+      maxInteger = Math.floor(parseInt(maxInput,10));
+      randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
+    }
     else  {
     challengerOneConditional.innerText = "That's Too Low"}
     
     if (parseInt(challengerTwoGuessInput.value) > randomNumber) {
       challengerTwoConditional.innerText = "That's Too High"}
     else if (parseInt(challengerTwoGuessInput.value) == randomNumber) {
-      challengerTwoConditional.innerText = "FUCK YOU FOR GUESSING RIGHT"}
+      challengerTwoConditional.innerText = "FUCK YOU FOR GUESSING RIGHT";
+      minInput = parseInt(minInput.value) - 10;
+      min.innerText = minInput;
+      maxInput = parseInt(maxInput.value) + 10;
+      max.innerText = maxInput;
+      minInteger = Math.ceil(parseInt(minInput,10));
+      maxInteger = Math.floor(parseInt(maxInput,10));
+      randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
+    }
     else  {
     challengerTwoConditional.innerText = "That's Too Low"}
 
