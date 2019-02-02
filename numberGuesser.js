@@ -95,6 +95,7 @@ resetButton.addEventListener('click', reset);
       minInteger = Math.ceil(parseInt(minInput,10));
       maxInteger = Math.floor(parseInt(maxInput,10));
       randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
+      
     }
     else  {
     challengerOneConditional.innerText = "That's Too Low"}
@@ -110,6 +111,7 @@ resetButton.addEventListener('click', reset);
       minInteger = Math.ceil(parseInt(minInput,10));
       maxInteger = Math.floor(parseInt(maxInput,10));
       randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
+
     }
     else  {
     challengerTwoConditional.innerText = "That's Too Low"}
