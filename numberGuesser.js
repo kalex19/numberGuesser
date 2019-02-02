@@ -19,6 +19,7 @@ var clearButton = document.querySelector('.clear-button')
 var resetButton = document.querySelector('.reset-button')
 
 
+
 var challengerOneConditional = document.querySelector(".challenger-1-conditional")
 var challengerTwoConditional = document.querySelector(".challenger-2-conditional")
 
@@ -29,6 +30,8 @@ var errorMessageGuessTwo = document.querySelector('.error-message-guess-two')
 var minMoreMax = document.querySelector("#min-more-max")
 var outsideRange1 = document.querySelector("#outside-range-one")
 var outsideRange2 = document.querySelector("#outside-range-two")
+var noRange = document.querySelector("#no-range")
+var noSubmit = document.querySelector("#no-submit")
 
 
 
@@ -55,17 +58,22 @@ resetButton.addEventListener('click', reset);
     //   maxLessMin.classList.add("error-message");
     // }
 
+    if (minInput.value == "" || maxInput.value == "") {noRange.classList.remove("error-message")
+    } else {
+      noRange.classList.add('error-message')
+    }
+
     if (maxInteger < minInteger) {
       minMoreMax.classList.remove("error-message");
     }else{
       minMoreMax.classList.add("error-message");
     }
 
-    if (parseInt(minInput.value)=== NaN) {errorMessageRange.classList.remove("error-message");
+    if (parseInt(minInput.value)=== false) {errorMessageRange.classList.remove("error-message");
     } else {errorMessageRange.classList.add("error-message");
     }
 
-     if (parseInt(maxInput.value)=== NaN) {errorMessageRange.classList.remove("error-message");
+     if (parseInt(maxInput.value)=== false) {errorMessageRange.classList.remove("error-message");
     } else {errorMessageRange.classList.add("error-message");
     }
 };
@@ -100,6 +108,12 @@ resetButton.addEventListener('click', reset);
       errorMessageGuessTwo.classList.remove("error-message-guess-two")
     } else {
       errorMessageGuessTwo.classList.add("error-message-guess-two")
+    }
+
+    if (challengerNameOneInput.value == "" || challengerNameTwoInput.value == "" || challengerOneGuessInput.value == "" || challengerTwoGuessInput.value == ""){
+      noSubmit.classList.remove("error-message")
+    }else{
+     noSubmit.classList.add('error-message')
     }
 
     // if (parseInt(challengerOneGuessInput.value) > maxInteger || parseInt(challengerOneGuessInput.value) < minInteger) {outsideRange1.classList.remove("error-message")
