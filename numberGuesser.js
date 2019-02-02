@@ -22,6 +22,16 @@ var resetButton = document.querySelector('.reset-button')
 var challengerOneConditional = document.querySelector(".challenger-1-conditional")
 var challengerTwoConditional = document.querySelector(".challenger-2-conditional")
 
+var errorMessageRange = document.querySelector('.error-message')
+var errorMessageGuessOne = document.querySelector('.error-message-guess-one')
+var errorMessageGuessTwo = document.querySelector('.error-message-guess-two')
+// var maxLessMin = document.querySelector("#max-less-min")
+var minMoreMax = document.querySelector("#min-more-max")
+var outsideRange1 = document.querySelector("#outside-range-one")
+var outsideRange2 = document.querySelector("#outside-range-two")
+
+
+
 updateButton.addEventListener("click", updateRange);
 submitButton.addEventListener("click", submitInfo);
 clearButton.addEventListener('click', clearInput);
@@ -36,6 +46,28 @@ resetButton.addEventListener('click', reset);
     maxInteger = Math.floor(parseInt(maxInput.value,10))
     randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
     console.log(randomNumber)
+
+    // console.log(parseInt(minInput.value))
+
+    // if (maxInteger < minInteger) {
+    //   maxLessMin.classList.remove("error-message");
+    // }else{
+    //   maxLessMin.classList.add("error-message");
+    // }
+
+    if (maxInteger < minInteger) {
+      minMoreMax.classList.remove("error-message");
+    }else{
+      minMoreMax.classList.add("error-message");
+    }
+
+    if (parseInt(minInput.value)=== NaN) {errorMessageRange.classList.remove("error-message");
+    } else {errorMessageRange.classList.add("error-message");
+    }
+
+     if (parseInt(maxInput.value)=== NaN) {errorMessageRange.classList.remove("error-message");
+    } else {errorMessageRange.classList.add("error-message");
+    }
 };
 
 
@@ -57,7 +89,34 @@ resetButton.addEventListener('click', reset);
       challengerTwoConditional.innerText = "FUCK YOU FOR GUESSING RIGHT"}
     else  {
     challengerTwoConditional.innerText = "That's Too Low"}
+
+    if (parseInt(challengerOneGuessInput.value) < minInteger || parseInt(challengerOneGuessInput.value) > maxInteger) {
+      errorMessageGuessOne.classList.remove("error-message-guess-one")
+    } else {
+      errorMessageGuessOne.classList.add("error-message-guess-one")
+    }
+
+    if (parseInt(challengerTwoGuessInput.value) < minInteger || parseInt(challengerTwoGuessInput.value) > maxInteger) {
+      errorMessageGuessTwo.classList.remove("error-message-guess-two")
+    } else {
+      errorMessageGuessTwo.classList.add("error-message-guess-two")
+    }
+
+    // if (parseInt(challengerOneGuessInput.value) > maxInteger || parseInt(challengerOneGuessInput.value) < minInteger) {outsideRange1.classList.remove("error-message")
+    // }else{
+    //   outsideRange1.classList.add(".error-message")
+    // }
+    //  if (parseInt(challengerTwoGuessInput.value) > maxInteger || parseInt(challengerTwoGuessInput.value) < minInteger) {outsideRange2.classList.remove("error-message")
+    // }else{
+    //   outsideRange2.classList.add(".error-message")
+    // }
+
+
   };
+
+
+
+
 
   function clearInput(){
     challengerNameOneInput.value = ""
@@ -73,6 +132,8 @@ resetButton.addEventListener('click', reset);
     challengerTwoGuessInput.value = ""
     randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
 }
+
+
 
 
 

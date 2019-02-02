@@ -99,6 +99,24 @@ form{
   justify-content: space-between;
 }
 
+.error-message, .error-message-guess-one, .error-message-guess-two {
+  display: none;
+}
+
+.error-message-style{
+  color: #DD1972;
+}
+
+.error-message-style img{
+  width: 10px;
+}
+
+.error-message-style p{
+  display: inline-block;
+}
+
+
+
 
 .range{
   width: 28%;
