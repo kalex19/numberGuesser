@@ -269,6 +269,10 @@ button{
   font-style: bold;
 }
 
+.middle-row{
+  text-align: center;
+}
+
 .winner{
   margin: 1%;
 }
@@ -278,6 +282,7 @@ button{
   text-align: center;
   display: block;
   font-weight: 300;
+  margin: 0;
 }
 
 .exit{
