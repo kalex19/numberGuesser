@@ -85,7 +85,7 @@ function updateRange() {
 
 
 function submitInfo() {
-  numGuesses += 2;
+  numGuesses++;
   challengerNameOne.innerText = challengerNameOneInput.value
   challengerNameTwo.innerText = challengerNameTwoInput.value
   challengerOneGuess.innerText = challengerOneGuessInput.value
@@ -179,7 +179,6 @@ function submitInfo() {
   }
 
   function pOneWinCard() {
-    numGuesses = 0;
     cardContainer.innerHTML += `
     <article>
     <div class="card">
@@ -204,11 +203,12 @@ function submitInfo() {
     <button class="exit">X</button>
     </div>
     </article>`
+    numGuesses = 0;
   }
 
 
   function pTwoWinCard(){
-    numGuesses = 0;
+    
     cardContainer.innerHTML += `
     <article>
     <div class="card">
@@ -233,6 +233,7 @@ function submitInfo() {
     <button class="exit">X</button>
     </div>
     </article>`
+    numGuesses = 0;
   }
 
 
