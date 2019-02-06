@@ -20,8 +20,6 @@ submitButton.addEventListener("click", submitInfo);
 clearButton.addEventListener('click', clearInput);
 resetButton.addEventListener('click', resetGame);
 
-
-
 function updateRange() {  
   generateRandomNumber ();
   console.log(randomNumber);
@@ -35,6 +33,18 @@ function submitInfo() {
   playerFeedback();
   submitErrorMessages();
 };
+
+challengerNameOneInput.addEventListener('keydown', nonAlphaNumericInput);
+challengerNameTwoInput.addEventListener('keydown', nonAlphaNumericInput);
+
+
+function nonAlphaNumericInput(event) {
+  var regEx = /\W/;
+  if (regEx.test(event.key)) {
+    event.preventDefault();
+    // submitErrorMessage();
+  }
+}
 
 function generateRandomNumber () {
   min.innerText = minInput.value;
@@ -109,6 +119,10 @@ function playerFeedback(){
     challengerTwoConditional.innerText = "That's Too Low"
   }
 };
+
+// function nonAlphaNumericInput(event){
+//   var regex = ; 
+// }
 
 function submitErrorMessages() {
   var errorMessageGuessOne = document.querySelector('.error-message-guess-one');
