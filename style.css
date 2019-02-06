@@ -103,6 +103,7 @@ form{
   display: none;
 }
 
+
 .error-message-style{
   color: #DD1972;
 }
@@ -289,6 +290,14 @@ button{
   border-radius: 50%;
   width: 5%;
   padding: 0%;
+}
+
+.min-input{
+  border-style: solid #DD1972;
+}
+
+.max-input{
+  border-style: solid #DD1972;
 }
 
 

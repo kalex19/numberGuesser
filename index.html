@@ -22,9 +22,9 @@
       <h3>Set Range</h3>
       <form>
         <div class="range"><label text="Min Range">Min Range</label>
-        <input type="text" class="min-input"></div>
+        <input type="number" class="min-input"></div>
         <div class="range"><label text="Max Range">Max Range</label>
-        <input type="text" class="max-input"></div>
+        <input type="number" class="max-input"></div>
         <div class="range"><button type="button" class="update">UPDATE</button></div>
       </form>
       </div>
@@ -35,7 +35,7 @@
         <p><img src='images/error-icon.svg'> Please Use a Number</p>
       </div>
       <div id="no-range" class="error-message error-message-style ">
-        <p>No Inputs Detected</p> 
+        <p>Input Numbers Only</p> 
       </div>
     </article>
     <!--Challenger 1-->
@@ -48,14 +48,16 @@
             <input type="text" class="challenger-1-name-input">
           </label>
           <div class="no-submit error-message error-message-style">
+            <img src='images/error-icon.svg'>
             <p>Missing Name</p>
           </div>
         </div>
         <div class="challenger">
           <label>Guess
-            <input class="guess" type="text" id="challenger-1-guess-input">
+            <input class="guess" type="number" id="challenger-1-guess-input">
           </label>
           <div class="no-submit error-message error-message-style">
+            <img src='images/error-icon.svg'>
             <p>Missing Guess</p>
           </div>
         </div>
@@ -72,14 +74,16 @@
             <input  type="text" class="challenger-2-name-input">
           </label>
           <div class="no-submit error-message error-message-style">
+            <img src='images/error-icon.svg'>
             <p>Missing Name</p>
           </div>
         </div>
         <div class="challenger">
           <label>Guess
-            <input class="guess" type="text" id="challenger-2-guess-input">
+            <input class="guess" type="number" id="challenger-2-guess-input">
           </label>
           <div class="no-submit error-message error-message-style">
+            <img src='images/error-icon.svg'>
             <p>Missing Guess</p>
           </div>
         </div>
