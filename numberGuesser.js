@@ -45,90 +45,83 @@ resetButton.addEventListener('click', reset);
 
 
 function updateRange() {  
-  min.innerText = minInput.value;
-  max.innerText = maxInput.value;
-  minInteger = Math.ceil(parseInt(minInput.value,10));
-  maxInteger = Math.floor(parseInt(maxInput.value,10));
-  randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
+  generateRandomNumber ()
   console.log(randomNumber);
-
-    // console.log(parseInt(minInput.value))
-
-    // if (maxInteger < minInteger) {
-    //   maxLessMin.classList.remove("error-message");
-    // }else{
-    //   maxLessMin.classList.add("error-message");
-    // }
-
-  if (minInput.value == "" || maxInput.value == "") {
-    noRange.classList.remove("error-message");
-  } else {
-    noRange.classList.add('error-message');
-  }
-
-  if (maxInteger < minInteger) {
-    minMoreMax.classList.remove("error-message");
-  } else {
-    minMoreMax.classList.add("error-message");
-  }
-
-  if (parseInt(minInput.value) === false) {
-    inputRangeError.classList.remove('error-message');
-  } else {
-    inputRangeError.classList.add('error-message');
-  }
-
-  if (parseInt(maxInput.value) === false) {inputRangeError.classList.remove('error-message');
-  } else {
-    inputRangeError.classList.add('error-message');
-  }
+  inputErrorMessages ()
 };
 
 
 function submitInfo() {
   numGuesses++;
-  challengerNameOne.innerText = challengerNameOneInput.value;
-  challengerNameTwo.innerText = challengerNameTwoInput.value;
-  challengerOneGuess.innerText = challengerOneGuessInput.value;
-  challengerTwoGuess.innerText = challengerTwoGuessInput.value;
-  if (parseInt(challengerOneGuessInput.value) > randomNumber) {
-    challengerOneConditional.innerText = "That's Too High"}
-  else if (parseInt(challengerOneGuessInput.value) == randomNumber) {
-    challengerOneConditional.innerText = "FUCK YOU FOR GUESSING RIGHT"
+  latestScoreText()
+  playerFeedback()
+  submitErrorMessages()
+  };
 
-    pOneWinCard();
+  function generateRandomNumber () {
+    min.innerText = minInput.value;
+    max.innerText = maxInput.value;
+    minInteger = Math.ceil(parseInt(minInput.value,10));
+    maxInteger = Math.floor(parseInt(maxInput.value,10));
+    randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
+  };
 
-      // minInput = parseInt(minInput.value) - 10;
-      // min.innerText = minInput;
-      // maxInput = parseInt(maxInput.value) + 10;
-      // max.innerText = maxInput;
-      // minInteger = Math.ceil(parseInt(minInput,10));
-      // maxInteger = Math.floor(parseInt(maxInput,10));
-      // randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
+  function inputErrorMessages () {
+    if (minInput.value == "" || maxInput.value == "") {
+      noRange.classList.remove("error-message");
     } else {
-      challengerOneConditional.innerText = "That's Too Low"}
+      noRange.classList.add('error-message');
+    }
+
+    if (maxInteger < minInteger) {
+      minMoreMax.classList.remove("error-message");
+    } else {
+      minMoreMax.classList.add("error-message");
+    }
+
+    if (parseInt(minInput.value) === false) {
+      inputRangeError.classList.remove('error-message');
+    } else {
+      inputRangeError.classList.add('error-message');
+    }
+
+    if (parseInt(maxInput.value) === false) {
+      inputRangeError.classList.remove('error-message');
+    } else {
+      inputRangeError.classList.add('error-message');
+    }
+  };
+
+  function latestScoreText() {
+    challengerNameOne.innerText = challengerNameOneInput.value;
+    challengerNameTwo.innerText = challengerNameTwoInput.value;
+    challengerOneGuess.innerText = challengerOneGuessInput.value;
+    challengerTwoGuess.innerText = challengerTwoGuessInput.value;
+  };
+
+  function playerFeedback(){
+  if (parseInt(challengerOneGuessInput.value) > randomNumber) {
+    challengerOneConditional.innerText = "That's Too High"
+  } else if (parseInt(challengerOneGuessInput.value) == randomNumber) {
+    challengerOneConditional.innerText = "BOOM"
+    pOneWinCard();    
+  } else {
+    challengerOneConditional.innerText = "That's Too Low"
+  };
 
 
+  if (parseInt(challengerTwoGuessInput.value) > randomNumber) {
+    challengerTwoConditional.innerText = "That's Too High";
+  } else if (parseInt(challengerTwoGuessInput.value) == randomNumber) {
+    challengerTwoConditional.innerText = "BOOM";
+    pTwoWinCard();
+  } else {
+    challengerTwoConditional.innerText = "That's Too Low"
+  }
+  };
 
-    if (parseInt(challengerTwoGuessInput.value) > randomNumber) {
-      challengerTwoConditional.innerText = "That's Too High";
-    } else if (parseInt(challengerTwoGuessInput.value) == randomNumber) {
-      challengerTwoConditional.innerText = "FUCK YOU FOR GUESSING RIGHT";
-      pTwoWinCard();
-
-          minInput = parseInt(minInput.value) - 10;
-          min.innerText = minInput;
-          maxInput = parseInt(maxInput.value) + 10;
-          max.innerText = maxInput;
-          minInteger = Math.ceil(parseInt(minInput,10));
-          maxInteger = Math.floor(parseInt(maxInput,10));
-          randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
-
-      } else {
-          challengerTwoConditional.innerText = "That's Too Low"
-      }
-
-      if (parseInt(challengerOneGuessInput.value) < minInteger || parseInt(challengerOneGuessInput.value) > maxInteger) {
+  function submitErrorMessages() {
+     if (parseInt(challengerOneGuessInput.value) < minInteger || parseInt(challengerOneGuessInput.value) > maxInteger) {
          errorMessageGuessOne.classList.remove("error-message-guess-one")
       } else {
         errorMessageGuessOne.classList.add("error-message-guess-one")
@@ -145,22 +138,7 @@ function submitInfo() {
       } else {
         noSubmit.classList.add('error-message')
       }
-
-    // if (parseInt(challengerOneGuessInput.value) > maxInteger || parseInt(challengerOneGuessInput.value) < minInteger) {outsideRange1.classList.remove("error-message")
-    // }else{
-    //   outsideRange1.classList.add(".error-message")
-    // }
-    //  if (parseInt(challengerTwoGuessInput.value) > maxInteger || parseInt(challengerTwoGuessInput.value) < minInteger) {outsideRange2.classList.remove("error-message")
-    // }else{
-    //   outsideRange2.classList.add(".error-message")
-    // }
-
-
   };
-
-
-
-
 
   function clearInput() {
     challengerNameOneInput.value = "";
@@ -234,8 +212,13 @@ function submitInfo() {
     </div>
     </article>`
     numGuesses = 0;
-  }
-
-
-
-
+  };
+//Attempt to generate new number on win 
+//DOES NOT WORK AFTER 3rd ITERATION THROUGH GAME
+  // minInput = parseInt(minInput.value) - 10;
+      // min.innerText = minInput;
+      // maxInput = parseInt(maxInput.value) + 10;
+      // max.innerText = maxInput;
+      // minInteger = Math.ceil(parseInt(minInput,10));
+      // maxInteger = Math.floor(parseInt(maxInput,10));
+      // randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
