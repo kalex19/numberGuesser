@@ -6,6 +6,7 @@ var challengerNameOneInput = document.querySelector('.challenger-1-name-input');
 var challengerNameTwoInput = document.querySelector('.challenger-2-name-input');
 var challengerOneGuessInput = document.querySelector('#challenger-1-guess-input');
 var challengerTwoGuessInput = document.querySelector('#challenger-2-guess-input');
+var cardContainer = document.querySelector('.column-2');
 var guessBox = document.querySelector('.guess-box')
 var updateButton = document.querySelector('.update');
 var submitButton = document.querySelector('.submit-button');
@@ -14,13 +15,13 @@ var resetButton = document.querySelector('.reset-button');
 var numGuesses = 0;
 var randomNumber;
 
-// challengerNameOneInput.value === '' && challengerNameTwoInput.value === '' && challengerOneGuessInput.value === '' && challengerTwoGuessInput.value === ''
 
 updateButton.addEventListener('click', updateRange, disableReset);
 submitButton.addEventListener('click', submitInfo);
 clearButton.addEventListener('click', clearInput);
 resetButton.addEventListener('click', resetGame);
 guessBox.addEventListener('keyup', disableClear, disableReset);
+cardContainer.addEventListener('click', deleteCard)
 
 disableClear()
 disableReset()
@@ -121,12 +122,12 @@ function latestScoreText() {
 function playerFeedback(){
   var challengerOneConditional = document.querySelector('.challenger-1-conditional');
   var challengerTwoConditional = document.querySelector('.challenger-2-conditional');
-  var cardContainer = document.querySelector('.column-2');
 
   if (parseInt(challengerOneGuessInput.value) > randomNumber) {
     challengerOneConditional.innerText = 'That\'s Too High'
   } else if (parseInt(challengerOneGuessInput.value) == randomNumber) {
-    challengerOneConditional.innerText = 'BOOM'
+    challengerOneConditional.innerText = 'BOOM!'
+    changeRangeOnWin();
     pOneWinCard();    
   } else {
     challengerOneConditional.innerText = 'That\'s Too Low'
@@ -135,7 +136,8 @@ function playerFeedback(){
   if (parseInt(challengerTwoGuessInput.value) > randomNumber) {
     challengerTwoConditional.innerText = 'That\'s Too High';
   } else if (parseInt(challengerTwoGuessInput.value) == randomNumber) {
-    challengerTwoConditional.innerText = 'BOOM';
+    challengerTwoConditional.innerText = 'BOOM!';
+    changeRangeOnWin();
     pTwoWinCard();
   } else {
     challengerTwoConditional.innerText = 'That\'s Too Low'
@@ -173,30 +175,6 @@ function submitErrorMessages() {
 }
 
 
- //  if (challengerNameOneInput.value === ''){ 
- //    noSubmit.classList.remove('error-message')
- //  } else {
- //    noSubmit.classList.add('error-message')
- //  }
-
- // if (challengerOneGuessInput.value === ''){ 
- //    noSubmit.classList.remove('error-message')
- //  } else {
- //    noSubmit.classList.add('error-message')
- //  }
-
- // if (challengerNameTwoInput.value === ''){ 
- //    noSubmit.classList.remove('error-message')
- //  } else {
- //    noSubmit.classList.add('error-message')
- //  }
-
- // if (challengerTwoGuessInput.value === ''){ 
- //    noSubmit.classList.remove('error-message')
- //  } else {
- //    noSubmit.classList.add('error-message')
- //  }
-
 
 function clearInput() {
   challengerNameOneInput.value = '';
@@ -204,7 +182,7 @@ function clearInput() {
   challengerOneGuessInput.value = '';
   challengerTwoGuessInput.value = '';
   disableClear();
-};
+}
 
 function resetGame() {
   numGuesses = 0;
@@ -213,7 +191,22 @@ function resetGame() {
   challengerOneGuessInput.value = '';
   challengerTwoGuessInput.value = '';
   generateRandomNumber();
-};
+}
+
+
+function changeRangeOnWin(){
+  var newMin;
+  if (min.innerText <= 10) {
+    newMin = 1;
+  } else {
+    newMin = parseInt(min.innerText) - 10;
+  }
+  var newMax = parseInt(max.innerText) + 10;
+  min.innerText = newMin;
+  max.innerText = newMax;
+  randomNumber = Math.floor(Math.random() * (newMax - newMin + 1)) + newMin;
+}
+ 
 
 function pOneWinCard() {
   cardContainer.innerHTML += `
@@ -263,12 +256,10 @@ function pTwoWinCard() {
   </article>`
   numGuesses = 0;
 };
-//Attempt to generate new number on win 
-//DOES NOT WORK AFTER 3rd ITERATION THROUGH GAME
-  // minInput = parseInt(minInput.value) - 10;
-      // min.innerText = minInput;
-      // maxInput = parseInt(maxInput.value) + 10;
-      // max.innerText = maxInput;
-      // minInteger = Math.ceil(parseInt(minInput,10));
-      // parseInt(maxInput.value) = Math.floor(parseInt(maxInput,10));
-      // randomNumber = Math.floor(Math.random() * (maxInteger - minInteger + 1)) + minInteger;
+
+function deleteCard(e) {
+  if (e.target.className === 'exit') {
+    e.target.parentElement.parentElement.remove()
+  }
+}
+
