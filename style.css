@@ -300,7 +300,9 @@ button{
   border-style: solid #DD1972;
 }
 
-
+button:focus {
+  outline: 0;
+}
 
 
 
