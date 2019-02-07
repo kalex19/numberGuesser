@@ -127,11 +127,13 @@ input {
   width: 100%;
 }
 
-.error-message, .error-message-guess-one, .error-message-guess-two {
+.error-message,
+.error-message-guess-one,
+.error-message-guess-two {
   display: none;
 }
 
-.error-message-style{
+.error-message-style {
   color: #DD1972;
 }
 
@@ -160,7 +162,8 @@ span {
   width: 34%;
 }
 
-.guess-box-borders, .range-error-border {
+.guess-box-borders,
+.range-error-border {
   border: solid 1px #DD1972;
 }
 
@@ -181,7 +184,8 @@ span {
   background-color: #DD1972;
 }
 
-.clear-enabled, .reset-enabled {
+.clear-enabled,
+.reset-enabled {
   background-color: #6E6E6E;
 }
 
@@ -197,16 +201,14 @@ span {
   margin: 3%;
   text-align: center;
   width: 40%; 
-  
 }
 
-.current{
-  color:#F74D9B;
+.current {
+  color: #F74D9B;
   font-size: 3em;
   text-decoration: none;
   font-weight: 700;
 }
-
 
 .outer-line {
   display: inline-block;
@@ -218,7 +220,7 @@ span {
 }
 
 .inner-line {
-  background:#D0D2D3 ;
+  background: #D0D2D3 ;
   box-shadow: 0px 0px 0px 50px #D0D2D3;
   display: inline-block;
   height: 88px;
@@ -256,11 +258,11 @@ span {
   font-style: bold;
 }
 
-.middle-row{
+.middle-row {
   text-align: center;
 }
 
-.winner{
+.winner {
   margin: 1%;
 }
 
