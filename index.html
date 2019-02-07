@@ -5,7 +5,6 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number Guesser</title>
-    
   </head>
   <body>
 <!--Header-->    
@@ -22,9 +21,9 @@
       <h3>Set Range</h3>
       <form>
         <div class="range"><label text="Min Range">Min Range</label>
-        <input type="number" class="min-input" pattern="([A-Z])\w+"></div>
+        <input type="number" class="min-input place-holder" pattern="([A-Z])\w+"></div>
         <div class="range"><label text="Max Range">Max Range</label>
-        <input type="number" class="max-input" pattern="([A-Z])\w+"></div>
+        <input type="number" class="max-input place-holder" pattern="([A-Z])\w+"></div>
         <div class="range"><button type="button" class="update">UPDATE</button></div>
       </form>
       </div>
@@ -45,9 +44,9 @@
       <form>
         <div class="c-name">
           <label>Name
-            <input type="text" class=" no-submit challenger-1-name-input">
+            <input type="text" class="no-submit challenger-1-name-input">
           </label>
-          <div class=" error-message error-message-style">
+          <div class="error-message error-message-style">
             <img src='images/error-icon.svg'>
             <p>Missing Name</p>
           </div>
@@ -56,7 +55,7 @@
           <label>Guess
             <input class="guess no-submit" type="number" id="challenger-1-guess-input">
           </label>
-          <div class=" error-message error-message-style">
+          <div class="error-message error-message-style">
             <img src='images/error-icon.svg'>
             <p>Missing Guess</p>
           </div>
@@ -71,16 +70,16 @@
       <form>
         <div class="c-name">
           <label>Name
-            <input  type="text" class=" no-submit challenger-2-name-input">
+            <input  type="text" class="no-submit challenger-2-name-input">
           </label>
-          <div class=" error-message error-message-style">
+          <div class="error-message error-message-style">
             <img src='images/error-icon.svg'>
             <p>Missing Name</p>
           </div>
         </div>
         <div class="challenger">
           <label>Guess
-            <input class=" no-submit guess" type="number" id="challenger-2-guess-input">
+            <input class="no-submit guess" type="number" id="challenger-2-guess-input">
           </label>
           <div class=" error-message error-message-style">
             <img src='images/error-icon.svg'>
