@@ -31,8 +31,10 @@ disableReset()
 function disableReset() {
   if (randomNumber !== undefined) {
     resetButton.disabled = false;
+    resetButton.classList.add('reset-enabled')
   } else {
     resetButton.disabled = true;
+    resetButton.classList.remove('reset-enabled')
     generateRandomNumber()
   }
 }
@@ -40,8 +42,10 @@ function disableReset() {
 function disableClear() {
   if (challengerNameOneInput.value === '' && challengerNameTwoInput.value === '' && challengerOneGuessInput.value === '' && challengerTwoGuessInput.value === '') {
     clearButton.disabled = true;
+    clearButton.classList.remove('clear-enabled')
   } else {
     clearButton.disabled = false;
+    clearButton.classList.add('clear-enabled')
   }
 }
 

@@ -1,33 +1,29 @@
-*{
+* {
   box-sizing: border-box;
-  /*border: red 1px solid;*/
 }
 
-body{
+body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
 
-/*Header*/
-
-header{
-  background-color:#404041;
+header {
+  background-color: #404041;
   text-align: center;
-  width: 100%;
 }
 
-h1{
+h1 {
   color: #DD1972;
   font-size: 3em;
   font-weight: 300;
-  margin:0; 
+  margin: 0; 
 }
 
-strong{
+strong {
   font-weight: 700;
 }
 
-.line{
+.line {
    color: #fff;
    font-size: 1em;
    font-weight: 300;
@@ -61,84 +57,86 @@ strong{
   margin-left: 15px;
 }
 
-/*Main Content*/
-
-main{
+main {
   display: flex;
-  flex-wrap: wrap;
 }
 
-/*Column 1*/
-
-section{
+section {
   display: flex;
   flex-direction: column;
-  margin:0;
   width: 50%;
 }
 
-.column-1{
+.column-1 {
   background-color: #F7F7F7;
 }
 
-article{
+article {
   background-color: #fff;
   margin: 3%;
-  padding: 1%; 
-  width: auto; 
+  padding: 1%;  
 }
 
-h3{
+h3 {
   margin: 1%;
-  
 }
 
-form{
-  align-items: flex-end;
+form {
   display: flex;
   justify-content: space-between;
+}
+
+.range {
+  padding: 1%;
+  position: relative;
+  width: 28%;
+}
+
+.update {
+  background-color: #6E6E6E;
+  border-radius: 34px;  
+  bottom: 0;
+  color: #fff;
+  font-size: medium;
+  padding: 5%;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+button:focus {
+  outline: 0;
+}
+
+input:focus {
+  outline: 0;
+}
+
+input {
+  padding: 3%;
+  width: 100%;
+  font-size:1.25em;
 }
 
 .error-message, .error-message-guess-one, .error-message-guess-two {
   display: none;
 }
 
-
 .error-message-style{
   color: #DD1972;
 }
 
-.error-message-style img{
+.error-message-style img {
   width: 10px;
 }
 
-.error-message-style p{
+.error-message-style p {
   display: inline-block;
 }
 
-.range{
-  justify-content: space-around, center;
-  padding: 1%;
-  width: 28%;
-
-}
-
-input{
-  padding: 3%;
-  width: 100%;
-}
-
-.update{
-  background-color: #6E6E6E;
-  border-radius: 34px;  
-  color: #fff;
-  font-size: medium;
-  padding: 5%;
-  width: 100%;
-}
-
 span{
-  text-decoration: underline;margin: 1%;
+  text-decoration: underline;
+  margin: 1%;
 }
 
 .c-name{
@@ -154,12 +152,7 @@ span{
   width: 34%;
 }
 
-.guess{
-  font-size: 1.5em;
-  padding-top:1%;
-}
-
-.submit{
+.submit-button{
   background-color:#6E6E6E;
   border-radius: 34px; 
   color: #fff;
@@ -167,6 +160,16 @@ span{
   margin: 3% 1%;
   padding: 1%;
   width: 30%;
+}
+
+.submit-button:hover  {
+  background-color: #DD1972
+} 
+.clear-enabled:hover {
+  background-color: #DD1972
+}
+.reset-enabled:hover {
+  background-color: #DD1972;
 }
 
 button{
@@ -179,6 +182,10 @@ button{
   width: 30%;
 }
 
+.clear-enabled, .reset-enabled {
+  background-color: #6E6E6E;
+}
+
 .lastest-score{
   display: inline-block;
   margin: 3%;
@@ -189,9 +196,10 @@ button{
 }
 
 .current{
-  color:#DD1972;
+  color:#F74D9B;
   font-size: 3em;
   text-decoration: none;
+  font-weight: 700;
 }
 
 
@@ -227,6 +235,7 @@ button{
 }
 
 /*Column 2*/
+
 
  .column-2{
   background-color: #C3C4C5;
@@ -293,14 +302,3 @@ button{
   width: 5%;
 }
 
-.min-input{
-  border-style: solid #DD1972;
-}
-
-.max-input{
-  border-style: solid #DD1972;
-}
-
-input, button:focus {
-  outline: 0;
-}
