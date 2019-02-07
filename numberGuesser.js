@@ -250,7 +250,7 @@ function pOneWinCard() {
     <hr />
     <div class='card'>
       <p><strong class='minutes'>#</strong> ${numGuesses}</p>
-      <p id='minutes'><strong> ${totalMinutes}</strong>MINUTES</p>
+      <p id='minutes'><strong class='minutes'> ${totalMinutes}</strong>MINUTES</p>
       <button class='exit'>X</button>
     </div>
   </article>`
@@ -275,8 +275,8 @@ function pTwoWinCard() {
     </div>
     <hr />
     <div class='card'>
-      <p><strong class='minutes'>#</strong> ${numGuesses}</p>
-      <p id='minutes'><strong>${totalMinutes}</strong>MINUTES</p>
+      <p><strong>#</strong> ${numGuesses}</p>
+      <p id='minutes'><strong class='minutes'>${totalMinutes}</strong>MINUTES</p>
       <button class='exit'>X</button>
     </div>
   </article>`

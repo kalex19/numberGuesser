@@ -278,3 +278,49 @@ span {
   padding: 0;
   width: 5%;
 }
+  
+@media screen and (max-width: 978px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section {
+    width: 100%;
+  }
+  .column-1 {
+    background-color: #d0d2d3;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section {
+    width: 100%;
+  }
+  button {
+    font-size: .6em;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section {
+    width: 100%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .line {
+    font-size: .6em;
+  }
+  .range {
+    font-size: .8em;
+  }
+}
+
