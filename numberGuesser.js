@@ -101,7 +101,7 @@ function inputErrorMessages () {
 }
 
 function latestScoreText() {
-  if (challengerOneGuessInput.value > maxInput.value || challengerOneGuessInput.value < minInput.value || challengerTwoGuessInput.value > maxInput.value || challengerTwoGuessInput.value < minInput.value) {
+  if (parseInt(challengerOneGuessInput.value) > parseInt(maxInput.value) || parseInt(challengerOneGuessInput.value) < parseInt(minInput.value) || parseInt(challengerTwoGuessInput.value) > parseInt(maxInput.value) || parseInt(challengerTwoGuessInput.value) < parseInt(minInput.value)) {
     return;
   } else {
     var challengerNameOne = document.querySelector('.challenger-1-name');

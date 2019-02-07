@@ -1,0 +1,5 @@
+<h1>Number Guesser Project</h1>
+<p>We had to follow the guidelines outlined at <a href="http://frontend.turing.io/projects/number-guesser-doubles.html"></a></p>
+<p>We accomplished the functionality from phase zero to phase three in JavaScript. Overall the CSS and HTML fit style guides and have a clean and DRY feel to them. The largest stuggle was definitely with making the functions both modular and non-repetitve. We learned how to use node to grab and interact with nested elements. Another major accomplishment was fine tuning the event listeners to properly function under different conditions. Upon further interations, some features that we would want to iron out would be error messages and their pitfalls. In additon, we would like to further research pattern attributes and how to apply it to input elements in HTML.</p>
+<h3>Turing Screen Grab</h3><img src="images/turing-screen-grab">
+<h3>Our Screen Grab</h3><img src="image/BD-KL-screen-grab">
