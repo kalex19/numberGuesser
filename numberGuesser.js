@@ -237,9 +237,9 @@ function pOneWinCard() {
   cardContainer.innerHTML += `
   <article>
     <div class='card'>
-      <h4>${challengerNameOneInput.value}</h4>
+      <h4>${challengerNameOneInput.value.toUpperCase()}</h4>
       <p>vs</p>
-      <h4>${challengerNameTwoInput.value}</h4>
+      <h4>${challengerNameTwoInput.value.toUpperCase()}</h4>
     </div>
     <hr />
     <div class='middle-row'>
@@ -249,7 +249,7 @@ function pOneWinCard() {
     </div>
     <hr />
     <div class='card'>
-      <p><strong>#</strong> ${numGuesses}</p>
+      <p><strong class='minutes'>#</strong> ${numGuesses}</p>
       <p id='minutes'><strong> ${totalMinutes}</strong>MINUTES</p>
       <button class='exit'>X</button>
     </div>
@@ -263,9 +263,9 @@ function pTwoWinCard() {
   cardContainer.innerHTML += `
   <article>
     <div class='card'>
-      <h4>${challengerNameOneInput.value}</h4>
+      <h4>${challengerNameOneInput.value.toUpperCase()}</h4>
       <p>vs</p>
-      <h4>${challengerNameTwoInput.value}</h4>
+      <h4>${challengerNameTwoInput.value.toUpperCase()}</h4>
     </div>
     <hr />
     <div class='middle-row'>
@@ -275,7 +275,7 @@ function pTwoWinCard() {
     </div>
     <hr />
     <div class='card'>
-      <p><strong>#</strong> ${numGuesses}</p>
+      <p><strong class='minutes'>#</strong> ${numGuesses}</p>
       <p id='minutes'><strong>${totalMinutes}</strong>MINUTES</p>
       <button class='exit'>X</button>
     </div>
