@@ -7,224 +7,121 @@
     <title>Number Guesser</title>
     
   </head>
-    
-<!--Body-->
   <body>
-
 <!--Header-->    
-    <header>
-      <h1><strong>NUMBER</strong>GUESSER</h1>
-      <h4 class="line"><span> ULTIMATE CHALLENGER EDITION</span></h4>
-    </header>
-    
-<!--Main Content-->
-    <main>
-
+  <header>
+    <h1><strong>NUMBER</strong>GUESSER</h1>
+    <h4 class="line"><span> ULTIMATE CHALLENGER EDITION</span></h4>
+  </header>
+  <main>
 <!--Column 1-->
-      <section class="column-1">
-        
-        <!--Set Range-->
-        <article>
-          <div>
-          <h3>Set Range</h3>
-          <form>
-            <div class="range"><label text="Min Range">Min Range</label>
-            <input type="text" class="min-input"></div>
-            <div class="range"><label text="Max Range">Max Range</label>
-            <input type="text" class="max-input"></div>
-            <div class="range"><button type="button" class="update">UPDATE</button></div>
-          </form>
-        </div>
-        <div id="max-less-min"class="error-message error-message-style">
-          <p>
-           Max must be larger than min 
-          </p>
-        </div>
-        <div 
-        id="min-more-max" class="error-message error-message-style">
-          <p>
-           Min must be smaller than max
-          </p>
-        </div>
-        <div id ="input-range-error" class="error-message error-message-style"><p>
-          <img src='images/error-icon.svg'>
-          Use a number
-        </p>
-        </div>
-        <div id="no-range" class="error-message error-message-style ">
-         <p>
-           No inputs detected
-         </p> 
-        </div>
-        </article>
-      
-<!--Current Range-->
-        <article>
-          <p>The Current Range is <span class="min"><strong>1</strong></span>to<span class="max"><strong>100</strong></span></p>
-
-<!--Challenger 1-->
-          <h3>Challenger 1</h3>
-          <form>
-            <div class="c-name">
-            <label>Name
-              <input type="text" class="challenger-1-name-input">
-            </label>
+  <section class="column-1">
+    <!--Set Range-->
+    <article>
+      <div>
+      <h3>Set Range</h3>
+      <form>
+        <div class="range"><label text="Min Range">Min Range</label>
+        <input type="number" class="min-input" pattern="([A-Z])\w+"></div>
+        <div class="range"><label text="Max Range">Max Range</label>
+        <input type="number" class="max-input" pattern="([A-Z])\w+"></div>
+        <div class="range"><button type="button" class="update">UPDATE</button></div>
+      </form>
+      </div>
+      <div id="min-more-max" class="error-message error-message-style">
+        <p>Min Must be Smaller than Max</p>
+      </div>
+      <div id ="input-range-error" class="error-message error-message-style">
+        <p><img src='images/error-icon.svg'> Please Use a Number</p>
+      </div>
+      <div id="no-range" class="error-message error-message-style ">
+        <p>Input Numbers Only</p> 
+      </div>
+    </article>
+    <!--Challenger 1-->
+    <article class="guess-box">
+      <p>The Current Range is <span class="min"><strong>1</strong></span>to<span class="max"><strong>100</strong></span></p>
+      <h3>Challenger 1</h3>
+      <form>
+        <div class="c-name">
+          <label>Name
+            <input type="text" class=" no-submit challenger-1-name-input">
+          </label>
+          <div class=" error-message error-message-style">
+            <img src='images/error-icon.svg'>
+            <p>Missing Name</p>
           </div>
-          <div class="challenger">
-            <label>Guess
-              <input class="guess" type="text" id="challenger-1-guess-input">
-            </label>
+        </div>
+        <div class="challenger">
+          <label>Guess
+            <input class="guess no-submit" type="number" id="challenger-1-guess-input">
+          </label>
+          <div class=" error-message error-message-style">
+            <img src='images/error-icon.svg'>
+            <p>Missing Guess</p>
           </div>
-          </form>
-          <div class="error-message-guess-one error-message-style">
-          <img src='images/error-icon.svg'>
-           <p>Not in range<p> 
-          </div>
-         <!--  <div id="outside-range-one" class="error-message error-message-style">
-          <p>
-            Guess outside range
-          </p>  
-          </div> -->
-          
-
+        </div>
+      </form>
+      <div class="error-message-guess-one error-message-style">
+        <img src='images/error-icon.svg'>
+        <p>Not in Range</p> 
+      </div>
 <!---Challenger 2-->
-          <h3>Challenger 2</h3>
-          <form>
-            <div class="c-name">
-            <label>Name
-              <input  type="text" class="challenger-2-name-input">
-            </label>
+      <h3>Challenger 2</h3>
+      <form>
+        <div class="c-name">
+          <label>Name
+            <input  type="text" class=" no-submit challenger-2-name-input">
+          </label>
+          <div class=" error-message error-message-style">
+            <img src='images/error-icon.svg'>
+            <p>Missing Name</p>
           </div>
-          <div class="challenger">
-            <label>Guess
-              <input class="guess" type="text" id="challenger-2-guess-input">
-            </label>
+        </div>
+        <div class="challenger">
+          <label>Guess
+            <input class=" no-submit guess" type="number" id="challenger-2-guess-input">
+          </label>
+          <div class=" error-message error-message-style">
+            <img src='images/error-icon.svg'>
+            <p>Missing Guess</p>
           </div>
-          </form>
-          <div class="error-message-guess-two error-message-style">
-          <img src='images/error-icon.svg'>
-           <p>Not in range<p>
-          </div>
-
-          <div id="no-submit" class="error-message error-message-style">
-            <p>
-              Missing name or guess input
-            </p>
-          </div>
-         <!--  <div id="outside-range-two" class="error-message error-message-style">
-          <p>
-            Guess outside range
-          </p>  
-          </div> -->
-
+        </div>
+      </form>
+      <div class="error-message-guess-two error-message-style">
+        <img src='images/error-icon.svg'>
+        <p>Not in Range</p>
+      </div>
 <!--Submit Buttons-->       
-          <button class="submit-button">SUBMIT GUESS</button>
-          <button class="reset-button">RESET GAME</button>
-          <button class="clear-button">CLEAR GAME</button>
-        </article>
-        
+      <button class="submit-button">SUBMIT GUESS</button>
+      <button class="reset-button">RESET GAME</button>
+      <button class="clear-button">CLEAR GAME</button>
+    </article>
 <!--Lastest Score-->
-        <article>
-        <h3>Latest Score</h3>
-          <div class="lastest-score">
-          <h4 class="challenger-1-name">Challenger 1 Name</h4>
-          <p>current guess</p>
-          <p><span class="current" id="challenger-1-guess">97</span></p>
-          <p class="challenger-1-conditional">that's too high</p>
-          </div>
-          
-        <div class="outer-line">
+    <article>
+      <h3>Latest Score</h3>
+      <div class="lastest-score">
+        <h4 class="challenger-1-name">Challenger 1 Name</h4>
+        <p>current guess</p>
+        <p><span class="current challenger-1-guess">00</span></p>
+        <h5 class="challenger-1-conditional">that's too high</h5>
+      </div>
+      <div class="outer-line">
         <div class="inner-line">
         </div>
-        </div>
-          <div class="lastest-score-2">
-          <h4 class="challenger-2-name">Challenger 2 Name</h4>
-          <p>current guess</p>
-          <p><span class="current" id="challenger-2-guess">3</span></p>
-          <p class="challenger-2-conditional">that's too low</p>
-        </div>
-        </article>
-      
-      </section>
-
+      </div>
+      <div class="lastest-score-2">
+        <h4 class="challenger-2-name">Challenger 2 Name</h4>
+        <p>current guess</p>
+        <p><span class="current challenger-2-guess">00</span></p>
+        <h5 class="challenger-2-conditional">that's too low</h5>
+      </div>
+    </article>
+  </section>
 <!--Column 2-->
-      <section class="column-2">
-
-        <!--Card 1-->
-    <!--     <article>
-
-          <div class="card">
-          <h4>Challenger 1 name</h4>
-          <p>vs</p>
-          <h4>Challenger 2 name</h4>
-          </div>
-
-          <hr />
-
-          <div class="card">
-          <h2 class="winner"><strong>CHALLENGER 1 NAME</strong></h2> 
-          <p class='winner2'>WINNER</p>
-          </div>
-
-          <hr />
-
-          <div class="card">
-          <p><strong>#</strong> GUESSES</p>
-          <p><strong>00</strong>MINUTES</p>
-          <button class="exit">X</button>
-          </div>
-        </article> -->
-
-    <!--Card 2-->
-        <!-- <article >
-          <div class="card">
-          <h4>Challenger 1 name</h4>
-          <p>vs</p>
-          <h4>Challenger 2 name</h4>
-          </div>
-
-          <hr />
-
-          <div class="card">
-          <h2 class="winner"><strong>CHALLENGER 1 NAME</strong></h2> 
-          <p class='winner2'>WINNER</p>
-          </div>
-
-          <hr />
-
-          <div class="card">
-          <p><strong>#</strong> GUESSES</p>
-          <p><strong>00</strong>MINUTES</p>
-          <button class="exit">X</button>
-          </div>
-
-        </article> -->
-
-  <!--Card 3-->
-        <!-- <article>
-          <div class="card">
-          <h4>Challenger 1 name</h4>
-          <p>vs</p>
-          <h4>Challenger 2 name</h4>
-          </div>
-
-          <hr />
-
-          <div class="card">
-          <h2 class="winner"><strong>CHALLENGER 1 NAME</strong></h2>
-          <p class='winner2'>WINNER</p>
-          </div>
-
-          <hr />
-
-          <div class="card">
-          <p><strong>#</strong> GUESSES</p>
-          <p><strong>00</strong>MINUTES</p>
-          <button class="exit">X</button>
-          </div>
-
-        </article> -->
-      </section>
-    </main>
+  <section class="column-2">
+  </section>
+  </main>
     <script type="text/javascript" src="numberGuesser.js"></script>
   </body>
+</html>
