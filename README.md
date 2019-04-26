@@ -46,7 +46,7 @@ In the project directory, please open in browser.
 ### Contributors
 
 Katherine Lewis @kalex19
-Brennan Duffey @
+Brennan Duffey @BrennanDuffey
 
 ### License
 Turing School of Software (for providing the project specifications).
