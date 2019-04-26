@@ -39,7 +39,7 @@ In the project directory, please open in browser.
 
 ### Issues
 
-* Winner nanme on card is off center and smaller font than comp
+* Winner name on card is off center and smaller font than comp
 * Missing extension
 
 ### Contributors
