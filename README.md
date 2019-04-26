@@ -1,5 +1,52 @@
-<h1>Number Guesser Project</h1>
-<p>We had to follow the guidelines outlined at <a href="http://frontend.turing.io/projects/number-guesser-doubles.html"></a></p>
-<p>We accomplished the functionality from phase zero to phase three in JavaScript. Overall the CSS and HTML fit style guides and have a clean and DRY feel to them. The largest stuggle was definitely with making the functions both modular and non-repetitve. We learned how to use node to grab and interact with nested elements. Another major accomplishment was fine tuning the event listeners to properly function under different conditions. Upon further interations, some features that we would want to iron out would be error messages and their pitfalls. In additon, we would like to further research pattern attributes and how to apply it to input elements in HTML.</p>
-<h3>Turing Screen Grab</h3><img src="images/turing-screen-grab">
-<h3>Our Screen Grab</h3><img src="image/BD-KL-screen-grab">
+# Number Guesser: Mod 1
+
+The project requirments were to build a game where two users can guess a number between 1 and 100, with the ability for the user to add custom ranges for increased difficulty of play. Both players' current guesses must be displayed, along with the final results of each match via a card UI. The card should have the name of the winner in the center with both player names above and how many guesses it took to get the correct guess below. Finally, each card has a delete button to remove the card. The game also needed to be fully responsive and usable down to screens/viewport width of 320px.
+
+### EXTENSION: each card should display how long the match took
+
+## Motivation
+
+As a second project, Number Guesser expanded on previously developed HTML and CSS skills and now incorporated vanilla JavaScript. It further tested my ability to design a UI that perfectly matched the comp and was interactive with the user. The best part of creating this project was learning to work on a team with another contributor.
+
+## Technologies Used
+
+* HTML 
+* CSS
+* JS
+* Local Storage
+
+## Installation & Setup
+
+Clone this repo.
+
+In the project directory, please open in browser.
+
+## Learning Goals
+
+* semantic HTML
+* clean & organized CSS styles
+* DRY and organized JavaScript
+* Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
+* Understand event bubbling and use event delegation on dynamic elements
+
+## Original Webpage
+
+<img src="images/turing-screen-grab" width="400">
+
+## Project Screen Grab
+
+<img src="image/BD-KL-screen-grab" width="400">
+
+### Issues
+
+* 
+*
+*
+
+### Contributors
+
+Katherine Lewis @kalex19
+Brennan Duffey @
+
+### License
+Turing School of Software (for providing the project specifications).
